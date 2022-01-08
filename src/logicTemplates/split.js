@@ -191,7 +191,7 @@ function getSplitFundsTransaction(
   const txGroup = group.assignGroupID(txns);
 
   const signedTxns = txGroup.map(
-    (txn) => logicsig.signLogicSigTransactionObject(txn, logicsig).blob
+    (txn) => logicsig.signLogicSigTransactionObject(txn, logicSig).blob
   );
   return utils.concatArrays(signedTxns[0], signedTxns[1]);
 }
